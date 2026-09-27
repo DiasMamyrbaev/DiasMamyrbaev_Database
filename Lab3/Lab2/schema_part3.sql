@@ -3,8 +3,8 @@ INSERT INTO Airport (airport_id, airport_name, country, state, city, created_at,
 SELECT 
     i, 
     'Airport_' || i, 
-    'Country_' || (i % 10), 
-    'State_' || (i % 5), 
+    'Country_' || i, 
+    'State_' || i, 
     'City_' || i, 
     NOW(), 
     NOW()
