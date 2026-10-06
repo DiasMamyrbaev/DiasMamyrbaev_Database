@@ -2,8 +2,7 @@
 "Expensive." */
 
 select 
-    booking_id,
-    ticket_price,
+    booking_id, ticket_price,
     case 
         when ticket_price < 100 then 'cheap'
         when ticket_price between 100 and 300 then 'medium'

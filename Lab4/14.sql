@@ -3,8 +3,7 @@ of arriving flights, and the total number of flights. Display only airports with
 flights and sort them by total traffic in descending order. */
 
 select 
-    ap.airport_id,
-    ap.airport_name,
+    ap.airport_id, ap.airport_name,
     count(case when f_dep.departing_airport_id is not null then 1 end) as departing_flights,
     count(case when f_arr.arriving_airport_id is not null then 1 end) as arriving_flights,
     (count(case when f_dep.departing_airport_id is not null then 1 end) + 

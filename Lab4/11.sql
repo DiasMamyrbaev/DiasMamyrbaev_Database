@@ -2,8 +2,7 @@
 have at least 3 flights and an average delay greater than 10 minutes. */
 
 select 
-    a.airline_id,
-    a.airline_name,
+    a.airline_id, a.airline_name,
     count(f.flight_id) as total_flights,
     avg(
         case 

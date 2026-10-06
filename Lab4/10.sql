@@ -2,8 +2,7 @@
 arrival time. Also calculate the percentage of delayed flights for each airline. */
 
 select 
-    a.airline_id,
-    a.airline_name,
+    a.airline_id, a.airline_name,
     count(case when f.act_arrival_time > f.sch_arrival_time then 1 end) as delayed_flights,
     count(f.flight_id) as total_flights,
     round(
